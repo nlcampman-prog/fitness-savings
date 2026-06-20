@@ -15,7 +15,7 @@ const allArticles = articles.sort((a: any, b: any) => new Date(b.frontmatter?.pu
     <div class="card-grid">
       {allArticles.map((article: any) => {
         const { title, description, pubDate, category } = article.frontmatter;
-        const slug = article.url?.split('/').pop()?.replace('.mdx', '') || '';
+        const slug = (article.file?.split('/')?.pop()?.replace(/\.(mdx|md)$/, '')) || '';
         return <ArticleCard title={title} description={description} url={`/articles/${slug}/`} category={category} date={pubDate} />;
       })}
     </div>

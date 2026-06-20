@@ -28,7 +28,7 @@ const categoryName = matchingArticles[0]?.frontmatter?.category || slug;
       <div class="card-grid">
         {matchingArticles.map((article: any) => {
           const { title, description, pubDate, category } = article.frontmatter;
-          const articleSlug = article.url?.split('/').pop()?.replace('.mdx', '') || '';
+          const articleSlug = (article.file?.split('/')?.pop()?.replace(/\.(mdx|md)$/, '')) || '';
           return <ArticleCard title={title} description={description} url={`/articles/${articleSlug}/`} category={category} date={pubDate} />;
         })}
       </div>

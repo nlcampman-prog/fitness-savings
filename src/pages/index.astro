@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 
 const articles = Object.values(import.meta.glob('../content/articles/*.mdx', { eager: true }));
-const allArticles = articles.sort((a: any, b: any) => new Date(b.frontmatter?.pubDate || 0).getTime() - new Date(a.frontmatter?.pubDate || 0).getTime());
+const allArticles = articles.sort((a: any, b: any) => new Date(b.frontmatter?.pubDate || b.frontmatter?.date || 0).getTime() - new Date(a.frontmatter?.pubDate || a.frontmatter?.date || 0).getTime());
 const featuredArticles = articles.filter((a: any) => a.frontmatter?.featured);
 ---
 
@@ -21,7 +21,7 @@ const featuredArticles = articles.filter((a: any) => a.frontmatter?.featured);
         <div class="card-grid">
           {featuredArticles.map((article: any) => {
             const { title, description, pubDate, category } = article.frontmatter;
-            const slug = article.url?.split('/').pop()?.replace('.mdx', '') || '';
+            const slug = (article.file?.split('/')?.pop()?.replace(/\.(mdx|md)$/, '')) || '';
             return <ArticleCard title={title} description={description} url={`/articles/${slug}/`} category={category} date={pubDate} />;
           })}
         </div>
@@ -32,7 +32,7 @@ const featuredArticles = articles.filter((a: any) => a.frontmatter?.featured);
       <div class="card-grid">
         {allArticles.map((article: any) => {
           const { title, description, pubDate, category } = article.frontmatter;
-          const slug = article.url?.split('/').pop()?.replace('.mdx', '') || '';
+          const slug = (article.file?.split('/')?.pop()?.replace(/\.(mdx|md)$/, '')) || '';
           return <ArticleCard title={title} description={description} url={`/articles/${slug}/`} category={category} date={pubDate} />;
         })}
       </div>
