@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+
+const articles = Object.values(import.meta.glob('../content/articles/*.mdx', { eager: true }));
+const allArticles = articles.sort((a: any, b: any) => new Date(b.frontmatter?.pubDate || 0).getTime() - new Date(a.frontmatter?.pubDate || 0).getTime());
+const featuredArticles = articles.filter((a: any) => a.frontmatter?.featured);
+---
+
+<BaseLayout title="FitSup Deals" description="Save on premium fitness supplements, workout gear, and recovery products. Daily deals and exclusive discount codes for gym enthusiasts." type="website">
+  <section class="hero">
+    <div class="container-narrow">
+      <h1>Save Big on <span class="highlight">Fitness &amp; Recovery</span></h1>
+      <p>Exclusive discount codes on the best supplements, workout gear, and recovery products. Train harder, save smarter.</p>
+    </div>
+  </section>
+  <div class="container">
+    {featuredArticles.length > 0 && (
+      <section>
+        <h2>🔥 Featured Deals</h2>
+        <div class="card-grid">
+          {featuredArticles.map((article: any) => {
+            const { title, description, pubDate, category } = article.frontmatter;
+            const slug = article.url?.split('/').pop()?.replace('.mdx', '') || '';
+            return <ArticleCard title={title} description={description} url={`/articles/${slug}/`} category={category} date={pubDate} />;
+          })}
+        </div>
+      </section>
+    )}
+    <section>
+      <h2>Latest Deals &amp; Reviews</h2>
+      <div class="card-grid">
+        {allArticles.map((article: any) => {
+          const { title, description, pubDate, category } = article.frontmatter;
+          const slug = article.url?.split('/').pop()?.replace('.mdx', '') || '';
+          return <ArticleCard title={title} description={description} url={`/articles/${slug}/`} category={category} date={pubDate} />;
+        })}
+      </div>
+    </section>
+  </div>
+</BaseLayout>
