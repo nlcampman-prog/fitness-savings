@@ -9,8 +9,14 @@ export default defineConfig({
   output: 'static',
   integrations: [
     mdx(),
-    sitemap({ filter: (page) => !page.includes('/404'), changefreq: 'daily', priority: 0.7, lastmod: new Date() }),
+    sitemap({
+      filter: (page) => !page.includes('/404'),
+      changefreq: 'daily',
+      priority: 0.7,
+      lastmod: new Date(),
+    }),
   ],
-  markdown: { shikiConfig: { theme: 'github-dark' } },
-  vite: { build: { rollupOptions: { output: { manualChunks: undefined } } } },
+  markdown: {
+    shikiConfig: { theme: 'github-light' },
+  },
 });
