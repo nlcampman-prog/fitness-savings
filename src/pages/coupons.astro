@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import fs from 'fs';
+
+const couponData = JSON.parse(fs.readFileSync('/home/team/shared/coupons-data.json', 'utf-8'));
+const coupons = couponData.fitsupdeals || [];
+
+const grouped = {};
+coupons.forEach(c => { if (!grouped[c.category]) grouped[c.category] = []; grouped[c.category].push(c); });
+const categories = Object.keys(grouped).sort();
+
+const articles = Object.values(import.meta.glob('../content/articles/*.mdx', { eager: true }));
+const articleMap = {};
+articles.forEach((a: any) => {
+  const title = a.frontmatter?.title || '';
+  const slug = a.url?.split('/').pop()?.replace('.mdx', '') || '';
+  articleMap[title.toLowerCase()] = slug;
+});
+
+function findArticleSlug(brand: string): string {
+  const lower = brand.toLowerCase();
+  for (const [title, slug] of Object.entries(articleMap)) {
+    if (title.includes(lower) || (lower.includes(title.split(' — ')[0]?.toLowerCase() || ''))) return slug as string;
+  }
+  return '';
+}
+---
+
+<BaseLayout title="Coupons & Discount Codes — FitSup Deals" description="Browse all active fitness discount codes. Save on supplements, workout gear, and recovery products with verified promo codes.">
+  <div class="container">
+    <div class="category-header">
+      <h1>All Coupon Codes 💰</h1>
+      <p>Every active discount code we've verified. Click any code to copy it, then click "Shop Now" to start saving.</p>
+    </div>
+
+    {categories.map(cat => (
+      <section>
+        <h2 style="margin-top:1.5rem;">{cat}</h2>
+        <div class="card-grid">
+          {grouped[cat].map(coupon => {
+            const slug = findArticleSlug(coupon.brand);
+            return (
+              <div class="card" style="display:flex;flex-direction:column;">
+                <span class="card-category">{coupon.category}</span>
+                <h3 class="card-title" style="font-size:1.2rem;margin-bottom:0.25rem;">{coupon.brand}</h3>
+                <div style="font-size:1.1rem;font-weight:800;color:var(--color-primary);margin-bottom:0.5rem;">{coupon.discount}</div>
+                <div style="background:var(--color-badge-bg);border:1px dashed var(--color-primary);border-radius:var(--radius-sm);padding:0.5rem 0.75rem;text-align:center;font-family:monospace;font-size:1.05rem;font-weight:700;margin-bottom:0.75rem;cursor:pointer;" onclick="navigator.clipboard.writeText('{coupon.code}');this.textContent='✓ Copied!'" title="Click to copy">{coupon.code}</div>
+                <p class="card-excerpt" style="flex:1;">{coupon.description}</p>
+                <div style="display:flex;gap:0.5rem;margin-top:0.75rem;flex-wrap:wrap;">
+                  <a href={coupon.url} class="aff-btn" rel="sponsored noopener noreferrer" target="_blank" style="flex:1;text-align:center;">Shop Now →</a>
+                  {slug && <a href={`/articles/${slug}/`} style="font-size:0.85rem;padding:0.5rem 1rem;border:1px solid var(--color-border);border-radius:var(--radius-sm);text-decoration:none;display:inline-flex;align-items:center;">Read Review →</a>}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+    ))}
+
+    {coupons.length === 0 && <p style="text-align:center;padding:3rem 0;color:var(--color-text-secondary);">No coupon codes available yet. Check back soon!</p>}
+  </div>
+</BaseLayout>
