@@ -1,0 +1,47 @@
+{
+  "wellnesssavings": [
+    { "brand": "Ryze Superfoods", "code": "UNCONVENTIONALSAHM15", "discount": "15% OFF", "url": "https://get.aspr.app/SH1ajx", "category": "Mushroom Coffee", "description": "Adaptogenic mushroom coffee blend for focus and gut health." },
+    { "brand": "Everyday Dose", "code": "NICHOLE-SIBLE", "discount": "$10 OFF", "url": "https://www.everydaydose.com/NICHOLE-SIBLE", "category": "Mushroom Coffee", "description": "Mushroom coffee with lion's mane, collagen, and l-theanine." },
+    { "brand": "MUD/WTR", "code": "MOM247", "discount": "20% OFF", "url": "https://mudwtr.com/MOM247", "category": "Coffee Alternative", "description": "Cacao-based morning blend with mushrooms and spices." },
+    { "brand": "Beam Organics", "code": "MOM247", "discount": "42% OFF", "url": "https://beamorganics.sjv.io/B0bvd0", "category": "Wellness", "description": "Plant-based supplements for sleep, energy, and beauty." },
+    { "brand": "Equip Foods", "code": "MOM247", "discount": "20-25% OFF", "url": "https://www.equipfoods.com/MOM247", "category": "Supplements", "description": "Clean protein, collagen, and beef liver supplements." },
+    { "brand": "Cowboy Colostrum", "code": "MOM247", "discount": "Code MOM247", "url": "https://cowboycolostrum.com/MOM247", "category": "Supplements", "description": "Grass-fed bovine colostrum for gut health and immunity." },
+    { "brand": "Earthley Wellness", "code": "Z8R52H7HQD87", "discount": "15% OFF", "url": "https://earthley.com/?affiliateId=unconventionalsahm", "category": "Natural Remedies", "description": "Natural wellness supplements, vitamin D cream, magnesium, and greens." },
+    { "brand": "MAKE Wellness", "code": "give10", "discount": "$25 OFF", "url": "https://makewellness.com/80139EE264/Shopping/Share?promo=give10", "category": "Peptides", "description": "Natural oral peptide supplements for metabolism and beauty." },
+    { "brand": "AG1", "code": "Link", "discount": "Free Travel Pouch + 7 Free Packs", "url": "https://www.drinkag1.com/", "category": "Greens", "description": "Premium greens powder with vitamins, probiotics, and adaptogens." },
+    { "brand": "Thorne", "code": "Link", "discount": "Affiliate Link", "url": "https://get.aspr.app/SH1oyQ", "category": "Supplements", "description": "Science-backed supplements — magnesium, probiotics, and more." },
+    { "brand": "Telos RX", "code": "Link", "discount": "Affiliate Link", "url": "https://get.aspr.app/SH1oXQ", "category": "Wellness", "description": "Wellness supplements for metabolism and energy support." },
+    { "brand": "Trimi GLP1", "code": "Link", "discount": "Affiliate Link", "url": "https://get.aspr.app/SH1oXQ", "category": "Weight Management", "description": "Natural GLP-1 support for weight management." },
+    { "brand": "Buoy Hydration", "code": "Code", "discount": "Affiliate Link", "url": "https://buoyhydration.com/", "category": "Hydration", "description": "Sugar-free electrolyte drops for daily hydration." },
+    { "brand": "Javvy Coffee", "code": "Code", "discount": "Affiliate Link", "url": "https://javvycoffee.com/", "category": "Coffee", "description": "Functional coffee blends with mushrooms and adaptogens." }
+  ],
+  "fitsupdeals": [
+    { "brand": "Beam Organics", "code": "MOM247", "discount": "42% OFF", "url": "https://beamorganics.sjv.io/B0bvd0", "category": "Recovery", "description": "Dream powder for sleep, hot chocolate for recovery." },
+    { "brand": "Equip Foods", "code": "MOM247", "discount": "20-25% OFF", "url": "https://www.equipfoods.com/MOM247", "category": "Protein", "description": "Clean protein powder, beef liver, and collagen supplements." },
+    { "brand": "1st Phorm", "code": "Link", "discount": "Affiliate Link", "url": "https://www.1stphorm.com/", "category": "Supplements", "description": "Premium fitness supplements — protein, pre-workout, vitamins." },
+    { "brand": "FlexBeam", "code": "Link", "discount": "Affiliate Link", "url": "https://rechargehealthas.sjv.io/oNoVyY", "category": "Recovery", "description": "Wearable red light therapy device for muscle recovery and pain." },
+    { "brand": "BonCharge", "code": "Code", "discount": "Affiliate Link", "url": "https://boncharge.com/", "category": "Recovery", "description": "Red light therapy, PEMF, and recovery devices." },
+    { "brand": "BodyHealth Perfect Amino", "code": "Link", "discount": "Affiliate Link", "url": "https://bodyhealth.com/", "category": "Supplements", "description": "99% utilization amino acid supplement for muscle recovery." },
+    { "brand": "Champion Peptides", "code": "Code", "discount": "Affiliate Link", "url": "https://championpeptides.com/", "category": "Supplements", "description": "Peptide supplements for muscle growth and recovery." },
+    { "brand": "MuleRun", "code": "Code", "discount": "Affiliate Link", "url": "https://mulerun.com/", "category": "Gear", "description": "Running gear and accessories for women." },
+    { "brand": "AEKE", "code": "Code", "discount": "Affiliate Link", "url": "https://aeke.com/", "category": "Equipment", "description": "Smart home gym equipment for strength training." },
+    { "brand": "Yoga Go", "code": "Code", "discount": "Affiliate Link", "url": "https://yogago.com/", "category": "Fitness", "description": "Yoga and flexibility training app." }
+  ],
+  "momsavesdeals": [
+    { "brand": "Lovevery", "code": "Link", "discount": "Up to 40% OFF", "url": "https://lovevery.com/", "category": "Baby Gear", "description": "Montessori play kits and toys for babies and toddlers." },
+    { "brand": "Once Upon A Farm", "code": "Link", "discount": "Affiliate Link", "url": "https://onceuponafarm.com/", "category": "Baby Food", "description": "Organic baby food pouches and kids' snacks." },
+    { "brand": "Maxi-Cosi", "code": "Link", "discount": "Affiliate Link", "url": "https://maxi-cosi.com/", "category": "Baby Gear", "description": "Car seats, strollers, and baby gear." },
+    { "brand": "Baby Deep Sleep", "code": "Code", "discount": "Affiliate Link", "url": "https://babydeepsleep.com/", "category": "Baby Sleep", "description": "Baby sleep aids and swaddles for better rest." },
+    { "brand": "Pink Blush Maternity", "code": "Link", "discount": "Affiliate Link", "url": "https://pinkblushmaternity.com/", "category": "Maternity", "description": "Stylish maternity and nursing clothing." },
+    { "brand": "Little Spoon", "code": "Code", "discount": "Affiliate Link", "url": "https://littlespoon.com/", "category": "Baby Food", "description": "Fresh, organic baby food delivered to your door." },
+    { "brand": "Mira Fertility", "code": "Link", "discount": "Affiliate Link", "url": "https://mirafertility.com/", "category": "Fertility", "description": "Lab-quality hormone tracking for faster conception." },
+    { "brand": "Semaine Health", "code": "Code", "discount": "Affiliate Link", "url": "https://semainehealth.com/", "category": "Wellness", "description": "Natural supplements for hormonal balance and period relief." },
+    { "brand": "Mud Pie", "code": "Code", "discount": "15% OFF", "url": "https://mudpie.com/", "category": "Kids Fashion", "description": "Adorable baby and kids' clothing and gifts." },
+    { "brand": "Kidpik", "code": "Link", "discount": "Affiliate Link", "url": "https://kidpik.com/", "category": "Kids Fashion", "description": "Kids' clothing subscription box — styled outfits delivered." },
+    { "brand": "Lume Deodorant", "code": "Link", "discount": "Affiliate Link", "url": "https://lumedeodorant.sjv.io/yZOkyy", "category": "Personal Care", "description": "Natural deodorant safe for pregnancy and nursing." },
+    { "brand": "Angel Bliss", "code": "Code", "discount": "Affiliate Link", "url": "https://angelbliss.com/", "category": "Baby Gear", "description": "Baby products and accessories." },
+    { "brand": "Baby Sunnies", "code": "Code", "discount": "Affiliate Link", "url": "https://babysunnies.com/", "category": "Baby Gear", "description": "Baby sunglasses and UV protection." },
+    { "brand": "Stork Exchange", "code": "Code", "discount": "Affiliate Link", "url": "https://storkexchange.com/", "category": "Baby Gear", "description": "Baby gear rental and exchange service." },
+    { "brand": "Rebel", "code": "Code", "discount": "Affiliate Link", "url": "https://rebel.com/", "category": "Kids Fashion", "description": "Kids' clothing and accessories." }
+  ]
+}
