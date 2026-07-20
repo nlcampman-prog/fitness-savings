@@ -1,8 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import fs from 'fs';
-
-const couponData = JSON.parse(fs.readFileSync('./src/data/coupons-data.json', 'utf-8'));
+import rawCouponData from '../data/coupons-data.json';
+const couponData = JSON.parse(JSON.stringify(rawCouponData));
 const coupons = couponData.fitsupdeals || [];
 
 const grouped = {};
